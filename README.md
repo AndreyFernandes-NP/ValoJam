@@ -1,18 +1,18 @@
-# [Título]
+# The Game You Sent Me
 
-Projeto desenvolvido para a **[ValoJam]**.
+Projeto desenvolvido para a **ValoJam**.
 
 ## Sobre o jogo
 
-[Título] é um jogo em desenvolvimento criado durante a jam, com foco em **[gênero principal]** e na proposta de **[resumo curto da ideia do jogo]**.
+The Game You Sent Me é um jogo em desenvolvimento criado durante a jam, com foco em **Visual Novel ARG/Tower Defense** e na proposta de **um jogo desconhecido enviado pelo seu amigo em uma conversa num aplicativo parecido com o MSN numa distro linux**.
 
 Este repositório reúne os arquivos, recursos e scripts do projeto enquanto a ideia, identidade visual e escopo final ainda estão sendo definidos.
 
 ## Conceito inicial
 
-A proposta do jogo é **[descrever em 1 ou 2 frases o conceito principal]**.
+A proposta do jogo é: **parecer à primeira vista um jogo simples de interface Linux com uma pegada de visual novel inspirada por Emily is Away, e uma gameplay dinâmica de um Tower Defense interativo. Porém, eventos desencadeiam uma série de acontecimentos que irão marcar o jogador de diversas formas**.
 
-O projeto está sendo construído em torno de **[tema da jam / mecânica principal / fantasy principal]**, com a intenção de criar uma experiência focada em **[sensação desejada: tensão, exploração, humor, desafio, etc.]**.
+O projeto está sendo construído em torno de uma **ARG com temas de Guerra/Apocalipse**, com a intenção de criar uma experiência focada em **tensão, medo, humor, empatia e choque**.
 
 ## Status do projeto
 
@@ -67,9 +67,12 @@ A documentação inicial do projeto será expandida ao longo da jam e pode inclu
 
 Projeto desenvolvido por:
 
-- [Nome / função]
-- [Nome / função]
-- [Nome / função]
+- <ins>Andrey</ins> - Lead GameDesigner / Roteirista / Programador
+- <ins>Kiara</ins> - GameDesigner / Designer / Concept&Artista
+- <ins>Vinicius</ins> - Sonoplasta / Concept&Animador
+- <ins>Maciel</ins> - Programador
+- <ins>Pedro</ins> - Programador
+- <ins>Yuki</ins> - Músico
 
 ## Observações
 
