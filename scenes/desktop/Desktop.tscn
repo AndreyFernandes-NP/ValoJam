@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bgy2j10tdsk6n"]
+
+[ext_resource type="Script" uid="uid://cse8sxme8k50b" path="res://scenes/desktop/Desktop.gd" id="1_3gxci"]
+
+[node name="Desktop" type="Node2D" unique_id=1497281701]
+script = ExtResource("1_3gxci")
+
+[node name="WindowLayer" type="Node2D" parent="." unique_id=298161027]
+
+[node name="Taskbar" type="PanelContainer" parent="." unique_id=1885854040]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TaskbarItems" type="HBoxContainer" parent="Taskbar" unique_id=1287937923]
+layout_mode = 2
+
+[node name="AppTray" type="HBoxContainer" parent="Taskbar/TaskbarItems" unique_id=730410040]
+layout_mode = 2
+
+[node name="SystemTray" type="HBoxContainer" parent="Taskbar/TaskbarItems" unique_id=957053616]
+layout_mode = 2
+
+[node name="OSMenu" type="Node" parent="Taskbar/TaskbarItems/SystemTray" unique_id=1207926856]
+
+[node name="LogoButton" type="TextureButton" parent="Taskbar/TaskbarItems/SystemTray/OSMenu" unique_id=576102162]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LauncherMenu" type="PanelContainer" parent="Taskbar/TaskbarItems/SystemTray/OSMenu" unique_id=486288647]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Taskbar/TaskbarItems/SystemTray/OSMenu/LauncherMenu" unique_id=2041470293]
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=912026858]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=2047712155]
+offset_left = 2.0
+offset_top = 44.0
+offset_right = 381.0
+offset_bottom = 165.0
+placeholder_text = "Ai Maciel, eu não mudei porra nenhuma aqui tá
+tá tudo bagunçado ali, eu só criei os nodes e
+não editei/modifiquei nada kkkkkkkkkkkk
+se vira ai carai, problema nn é meu n rsrsrs"

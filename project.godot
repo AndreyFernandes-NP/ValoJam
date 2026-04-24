@@ -10,9 +10,24 @@ config_version=5
 
 [application]
 
-config/name="Protótipo 3"
+config/name="The Game You Sent Me"
+config/version="0.1"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*uid://bwj26n3d0mkex"
+WindowManager="*uid://lllhdsqc7ae1"
+DialogueLoader="*uid://rqu8053yxx18"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/resizable=false
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [physics]
 
