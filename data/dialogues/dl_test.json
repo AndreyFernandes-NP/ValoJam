@@ -1,0 +1,37 @@
+{
+	"entry": "start",
+	"nodes": [
+		{
+			"id": "start",
+			"speaker": "user",
+			"text": "Ei novinha, tá online e metendo?",
+			"next": "response1"
+		},
+		{
+			"id": "response1",
+			"speaker": "novinha",
+			"text": "Caralho maluco, todo dia isso",
+			"next": "response2"
+		},
+		{
+			"id": "response2",
+			"speaker": "user",
+			"text": "Peida não xerequinha",
+			"next": "response3"
+		},
+		{
+			"id": "response3",
+			"speaker": "novinha",
+			"text": "blok",
+			"next": "response4"
+		},
+		{
+			"id": "response4",
+			"type": "choice",
+			"choices": [
+				{"text": "Hã? Quem é você e como conseguiu meu número?", "next": "followup2"},
+				{"text": "Quê? Como assim??", "next": "followup2"}
+			]
+		}
+	]
+}
