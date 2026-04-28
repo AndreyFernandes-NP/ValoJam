@@ -24,8 +24,16 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MessageBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=970938283]
+[node name="MessagesBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=970938283]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1355614869]
+layout_mode = 2
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=1618497212]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 8

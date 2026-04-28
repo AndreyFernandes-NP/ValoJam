@@ -65,9 +65,9 @@ func get_available_languages() -> Array[String]:
 	
 	return languages
 
-## get_available_languages() seria usado tipo assim:
-## var langs = DialogueLoader.get_available_languages()
-## pra então o dropdown das línguas aparecer
+# get_available_languages() seria usado tipo assim:
+# var langs = DialogueLoader.get_available_languages()
+# pra então o dropdown das línguas aparecer
 
 func _build_index() -> void:
 	_nodes_by_id.clear()
@@ -105,3 +105,15 @@ func _resolve_node(node_id: String) -> Dictionary:
 
 func is_choice(node: Dictionary) -> bool:
 	return node.get("type", "") == "choice"
+
+func confirm_node(node: Dictionary) -> void:
+	advance_to(node.get("next", "END"))
+
+func pick_choice(node: Dictionary, index: int) -> void:
+	var choices: Array = node.get("choices", "")
+	if index >= choices.size():
+		push_error("DialogueManager: índice de escolha inválido")
+		return
+	
+	var choice = choices[index]
+	advance_to(choice.get("next", "END"))

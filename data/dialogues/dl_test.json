@@ -10,28 +10,82 @@
 		{
 			"id": "response1",
 			"speaker": "novinha",
-			"text": "Caralho maluco, todo dia isso",
+			"text": "Hã? Quem é você??",
 			"next": "response2"
 		},
 		{
 			"id": "response2",
 			"speaker": "user",
-			"text": "Peida não xerequinha",
+			"text": "Relaxa, sou aquele cara, tu me conhece bem.",
 			"next": "response3"
 		},
 		{
 			"id": "response3",
 			"speaker": "novinha",
-			"text": "blok",
+			"text": "Quem???",
 			"next": "response4"
 		},
 		{
 			"id": "response4",
+			"speaker": "user",
+			"text": "Tu sabe quem, se faz de maluca não",
+			"next": "response5"
+		},
+		{
+			"id": "response5",
+			"speaker": "novinha",
+			"text": "???\nNão faço ideia",
+			"next": "response6"
+		},
+		{
+			"id": "response6",
+			"speaker": "user",
+			"text": "É sério, como cê não se lembra de mim?",
+			"next": "response7"
+		},
+		{
+			"id": "response7",
+			"speaker": "novinha",
+			"text": "Vo te dar blok",
+			"next": "response8"
+		},
+		{
+			"id": "response8",
+			"speaker": "user",
+			"text": "Tá bom parei, calma aí",
+			"next": "response9"
+		},
+		{
+			"id": "response9",
+			"speaker": "novinha",
+			"text": "Então diz quem logo",
+			"next": "choice1"
+		},
+		{
+			"id": "choice1",
 			"type": "choice",
 			"choices": [
-				{"text": "Hã? Quem é você e como conseguiu meu número?", "next": "followup2"},
-				{"text": "Quê? Como assim??", "next": "followup2"}
+				{"text": "Sou o antedeguemon", "next": "response10"},
+				{"text": "Quem", "next": "response10-1"}
 			]
+		},
+		{
+			"id": "response10",
+			"speaker": "user",
+			"text": "Sou o antedeguemon, não lembra?",
+			"next": "response11"
+		},
+		{
+			"id": "response10-1",
+			"speaker": "user",
+			"text": "Quem",
+			"next": "response11"
+		},
+		{
+			"id": "response11",
+			"speaker": "system",
+			"text": "[color=gray]- Você foi bloqueado pelo usuário(a), não é mais possível enviar/receber mensagens.[/color]",
+			"next": "END"
 		}
 	]
 }
