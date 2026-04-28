@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://j1luhlvsqmkl"]
+
+[ext_resource type="Script" uid="uid://cb7gbdhntvty0" path="res://Scripts/Desktop.gd" id="1_osffw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jgwu"]
+bg_color = Color(0.8158153, 0.81581545, 0.8158154, 1)
+
+[sub_resource type="Theme" id="Theme_osffw"]
+
+[node name="Desktop" type="Control" unique_id=1681405190]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 647.0
+script = ExtResource("1_osffw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2119545160]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.78148836, 0.9473639, 0.92495537, 1)
+
+[node name="Icons" type="Control" parent="." unique_id=1640991531]
+anchors_preset = 0
+offset_right = 88.0
+offset_bottom = 64.0
+
+[node name="TowerDefenseIcon" type="Button" parent="Icons" unique_id=2075765763]
+layout_mode = 1
+offset_left = 176.0
+offset_top = 96.0
+offset_right = 264.0
+offset_bottom = 160.0
+text = "BUTON"
+
+[node name="WindowsLayer" type="Control" parent="." unique_id=1381836170]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TowerDefenseWindow" type="Panel" parent="WindowsLayer" unique_id=2065287880]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WindowBackground" type="ColorRect" parent="WindowsLayer/TowerDefenseWindow" unique_id=1260279622]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.89895856, 0.76573443, 0.04530417, 1)
+
+[node name="TitleBar" type="Panel" parent="WindowsLayer/TowerDefenseWindow" unique_id=1274266258]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 24.0
+grow_horizontal = 2
+
+[node name="TitleBarBackground" type="ColorRect" parent="WindowsLayer/TowerDefenseWindow/TitleBar" unique_id=864697415]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19030324, 0.1813871, 0.18020287, 1)
+
+[node name="TitleLabel" type="Label" parent="WindowsLayer/TowerDefenseWindow/TitleBar" unique_id=1852619312]
+layout_mode = 0
+offset_left = 136.0
+offset_right = 176.0
+offset_bottom = 23.0
+text = "Tower Defense dos cria"
+
+[node name="CloseButton" type="Button" parent="WindowsLayer/TowerDefenseWindow/TitleBar" unique_id=1424775133]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -10.0
+offset_bottom = 10.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "X
+"
+
+[node name="Taskbar" type="Panel" parent="." unique_id=549330375]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8jgwu")
+
+[node name="Menu" type="Button" parent="Taskbar" unique_id=833923225]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -11.5
+offset_right = 80.0
+offset_bottom = 19.5
+grow_vertical = 2
+theme = SubResource("Theme_osffw")
+text = "MENU"
+
+[node name="timePanel" type="Panel" parent="Taskbar" unique_id=1160365493]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -114.0
+offset_top = -47.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Taskbar/timePanel" unique_id=943402993]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -11.5
+offset_right = 23.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "14:35 "
+vertical_alignment = 1

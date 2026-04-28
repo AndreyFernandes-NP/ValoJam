@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dhi5a64oav3d8"]
+
+[ext_resource type="Texture2D" path="res://assets/ui/Desktop/musica.png" id="1_ivehf"]
+
+[node name="MusicIcon" type="Control" unique_id=2077177298]
+custom_minimum_size = Vector2(80, 96)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 96.0
+offset_bottom = 104.0
+
+[node name="iconImage" type="TextureRect" parent="." unique_id=412840681]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_right = 32.0
+offset_bottom = 64.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("1_ivehf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="." unique_id=1317451026]
+layout_mode = 0
+offset_top = 66.0
+offset_right = 80.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.09009846, 0.09009849, 0.09009848, 1)
+theme_override_font_sizes/font_size = 16
+text = "PlaceHolder"
+horizontal_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="clickArea" type="Button" parent="." unique_id=306152515]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
