@@ -5,85 +5,105 @@
 			"id": "start",
 			"speaker": "user",
 			"text": "Ei novinha, tá online e metendo?",
+			"wait": 2.0,
 			"next": "response1"
 		},
 		{
 			"id": "response1",
 			"speaker": "novinha",
 			"text": "Hã? Quem é você??",
+			"wps": 11,
+			"wait": 2.0,
 			"next": "response2"
 		},
 		{
 			"id": "response2",
 			"speaker": "user",
 			"text": "Relaxa, sou aquele cara, tu me conhece bem.",
+			"wait": 3.0,
 			"next": "response3"
 		},
 		{
 			"id": "response3",
 			"speaker": "novinha",
 			"text": "Quem???",
+			"wps": 10,
+			"wait": 1.5,
 			"next": "response4"
 		},
 		{
 			"id": "response4",
 			"speaker": "user",
 			"text": "Tu sabe quem, se faz de maluca não",
+			"wait": 2.0,
 			"next": "response5"
 		},
 		{
 			"id": "response5",
 			"speaker": "novinha",
 			"text": "???\nNão faço ideia",
+			"wps": 13,
+			"wait": 1.5,
+			"pauses": [
+				{"at": 0.3, "duration": 0.5}
+			],
 			"next": "response6"
 		},
 		{
 			"id": "response6",
 			"speaker": "user",
 			"text": "É sério, como cê não se lembra de mim?",
+			"wait": 2.0,
 			"next": "response7"
 		},
 		{
 			"id": "response7",
 			"speaker": "novinha",
 			"text": "Vo te dar blok",
+			"wps": 13,
+			"wait": 1.0,
 			"next": "response8"
 		},
 		{
 			"id": "response8",
 			"speaker": "user",
 			"text": "Tá bom parei, calma aí",
+			"wait": 2.0,
 			"next": "response9"
 		},
 		{
 			"id": "response9",
 			"speaker": "novinha",
 			"text": "Então diz quem logo",
+			"wps": 15,
 			"next": "choice1"
 		},
 		{
 			"id": "choice1",
 			"type": "choice",
 			"choices": [
-				{"text": "Sou o antedeguemon", "next": "response10"},
-				{"text": "Quem", "next": "response10-1"}
+				{"text": "1. Sou o antedeguemon", "next": "response10"},
+				{"text": "2. Quem", "next": "response10-1"}
 			]
 		},
 		{
 			"id": "response10",
 			"speaker": "user",
 			"text": "Sou o antedeguemon, não lembra?",
+			"wait": 4.0,
 			"next": "response11"
 		},
 		{
 			"id": "response10-1",
 			"speaker": "user",
 			"text": "Quem",
+			"wait": 4.0,
 			"next": "response11"
 		},
 		{
 			"id": "response11",
 			"speaker": "system",
+			"wps": -1,
 			"text": "[color=gray]- Você foi bloqueado pelo usuário(a), não é mais possível enviar/receber mensagens.[/color]",
 			"next": "END"
 		}
