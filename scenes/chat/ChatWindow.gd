@@ -151,7 +151,7 @@ func _on_dialogue_ended() -> void:
 #1.1 Eventos teria o nome do arquivo original _events.json
 #1.2 Modificar o arquivo original pra conter apenas o id/speaker/texto
 #1.3 Garante que eventos sejam 'secretos' mas não hardcoded
-#1.4 Se tiver um _events-language.json carregará esse ao invés do padrão, permitindo até mods
+#1.4 Se tiver um _events-language.json carregará esse ao invés do padrão, permitindo mods
 #2. Arquivo _events.json será a coletânea de eventos como wps, wait, effects e etc
 #2.1 Ele será executado assim que um diálogo com o mesmo id for carregado no jogo
 #3.1 Lista de Eventos:
@@ -172,14 +172,19 @@ func _on_dialogue_ended() -> void:
 #3.1.12 choice_timeout 		// tempo limite pro player escolher antes que cancel_effects dê trigger
 #3.2 Lista de efeitos:
 #3.2.1 flag 				// seta uma flag específica um valor específico
-#3.2.2 delete_flag 			// deleta uma flag completamente do jogo
+#3.2.2 delete_flag 			// apaga uma flag completamente
 #3.2.3 increment_flag 		// incrementa uma flag por x valor
 #3.2.4 skip_to 				// pular pra algum id específico de mensagem (serve como next)
 #3.2.5 skip_to_load 		// pula pra algum id + carrega todas as mensagens puladas (de >> para)
 #3.2.6 close_chat 			// fecha a janela do chat (mas mantém o diálogo atual carregado)
 #3.2.7 close_unload_chat 	// fecha a janela + dá unload no chat
 #3.2.8 create_file 			// cria um arquivo de certo tipo no local especificado
-#3.2.8.1 filename 			// nome do arquivo
-#3.2.8.2 type 				// tipo do arquivo (txt, json, bat, etc)
-#3.2.8.3 path 				// local específico a ser criado ("user" = user:// e "origin" = pasta do jogo)
+#3.2.8.1 filename 			// nome do arquivo + tipo (.txt, .json, .bat, pode até ser vazio)
+#3.2.8.2 path 				// local específico a ser criado ("user/" = user:// e "origin/" = pasta do jogo)
+#3.2.9 write_file 			// cria e/ou escreve em um arquivo de x tipo
+#3.2.9.1 filename 			// arquivo a ser criado e/ou escrito (ex: texto.txt)
+#3.2.9.2 path 				// o mesmo do create_file
+#3.2.9.3 value 				// valor a ser escrito (use "\\//" para templates existentes no código)
+#4. Com todo o sistema acima temos um suporte "indireto" a mods, então, que tal tornar oficial?
+#4.1 Suporte apenas à diálogos/arg custom, TD e Desktop são outros 500.
 # END OF TO-DO
