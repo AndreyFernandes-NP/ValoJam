@@ -145,3 +145,41 @@ func _start_impatience_timer(node: Dictionary) -> void:
 
 func _on_dialogue_ended() -> void:
 	_pending_node = {}
+
+# TODO:
+#1. Separar entre dois arquivos, um pra diálogos e o outro pra eventos
+#1.1 Eventos teria o nome do arquivo original _events.json
+#1.2 Modificar o arquivo original pra conter apenas o id/speaker/texto
+#1.3 Garante que eventos sejam 'secretos' mas não hardcoded
+#1.4 Se tiver um _events-language.json carregará esse ao invés do padrão, permitindo até mods
+#2. Arquivo _events.json será a coletânea de eventos como wps, wait, effects e etc
+#2.1 Ele será executado assim que um diálogo com o mesmo id for carregado no jogo
+#3.1 Lista de Eventos:
+#3.1.1 type 				// tipo do evento ("choice" é o único tipo usado)
+#3.1.2 next 				// id da próxima mensagem a ir
+#3.1.3 choices 				// todas as escolhas do id atual (precisam conter texto e next)
+#3.1.4 condition 			// condições à serem cumpridas
+#3.1.4.1 flag 				// flag comparada à um valor para ser cumprida
+#3.1.5 else_effects 		// efeitos ativados caso conds não forem cumpridas
+#3.1.6 start_effects  		// efeitos ativados assim que der load num diálogo (precisa passar cond)
+#3.1.7 effects 		  		// efeitos ativados quando terminar um diálogo
+#3.1.8 cancel_effects 		// efeitos ativados após o impatience_timer
+#3.1.9 wps 					// palavras por segundo (timer de escrever)
+#3.1.10 wait 				// tempo de espera após mostrar a mensagem
+#3.1.11 pauses 				// uma "pausa" de escrita (ex de uso: efeito de apagar e escrever dnv)
+#3.1.11.1 at 				// % do tempo a ser esperado que dará o trigger (word_count / wps)
+#3.1.11.2 duration 			// tempo total que vai esperar antes de continuar
+#3.1.12 choice_timeout 		// tempo limite pro player escolher antes que cancel_effects dê trigger
+#3.2 Lista de efeitos:
+#3.2.1 flag 				// seta uma flag específica um valor específico
+#3.2.2 delete_flag 			// deleta uma flag completamente do jogo
+#3.2.3 increment_flag 		// incrementa uma flag por x valor
+#3.2.4 skip_to 				// pular pra algum id específico de mensagem (serve como next)
+#3.2.5 skip_to_load 		// pula pra algum id + carrega todas as mensagens puladas (de >> para)
+#3.2.6 close_chat 			// fecha a janela do chat (mas mantém o diálogo atual carregado)
+#3.2.7 close_unload_chat 	// fecha a janela + dá unload no chat
+#3.2.8 create_file 			// cria um arquivo de certo tipo no local especificado
+#3.2.8.1 filename 			// nome do arquivo
+#3.2.8.2 type 				// tipo do arquivo (txt, json, bat, etc)
+#3.2.8.3 path 				// local específico a ser criado ("user" = user:// e "origin" = pasta do jogo)
+# END OF TO-DO
