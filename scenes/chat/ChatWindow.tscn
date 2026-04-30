@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://ijjieqmpshjv"]
+
+[ext_resource type="Script" uid="uid://cwe4rsv4t6q5i" path="res://scenes/chat/ChatWindow.gd" id="1_wxl6r"]
+
+[node name="ChatWindow" type="Control" unique_id=75402779]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -560.0
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wxl6r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=691913424]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=963154790]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MessagesBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=970938283]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1503410344]
+layout_mode = 2
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 15
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer" unique_id=1355614869]
+visible = false
+layout_mode = 2
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=1618497212]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 8

@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 GameState="*uid://bwj26n3d0mkex"
 WindowManager="*uid://lllhdsqc7ae1"
-DialogueLoader="*uid://rqu8053yxx18"
+DialogueManager="*uid://cidmfe0iamrfl"
 
 [display]
 
