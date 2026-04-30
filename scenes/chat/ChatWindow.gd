@@ -163,7 +163,7 @@ func _on_dialogue_ended() -> void:
 #3.1.5 else_effects 		// efeitos ativados caso conds não forem cumpridas
 #3.1.6 start_effects  		// efeitos ativados assim que der load num diálogo (precisa passar cond)
 #3.1.7 effects 		  		// efeitos ativados quando terminar um diálogo
-#3.1.8 cancel_effects 		// efeitos ativados após o impatience_timer
+#3.1.8 cancel_effects 		// efeitos ativados após o choice_timeout
 #3.1.9 wps 					// palavras por segundo (timer de escrever)
 #3.1.10 wait 				// tempo de espera após mostrar a mensagem
 #3.1.11 pauses 				// uma "pausa" de escrita (ex de uso: efeito de apagar e escrever dnv)
@@ -185,6 +185,14 @@ func _on_dialogue_ended() -> void:
 #3.2.9.1 filename 			// arquivo a ser criado e/ou escrito (ex: texto.txt)
 #3.2.9.2 path 				// o mesmo do create_file
 #3.2.9.3 value 				// valor a ser escrito (use "\\//" para templates existentes no código)
+#3.2.10 play_sound 			// nome do som a ser tocado + volume 
+#3.2.11 play_shaders 		// nome do shaders a ser aplicado
+#3.2.11.1 duration 			// tempo que ele vai ser exibido, -1 = permanente na tela
+#3.2.12 show_image 			// nome da imagem a ser exibida
+#3.2.12.1 start_tween 		// fade-in, bounce-in, bezier, etc
+#3.2.12.1.1 duration 		// tempo em que será realizado o efeito, end também possui seu próprio
+#3.2.12.2 end_tween 		// fade-out, bounce-out, bezier, e etc
+#3.2.12.3 wait_duration 	// tempo de espera entre start/end tween
 #4. Com todo o sistema acima temos um suporte "indireto" a mods, então, que tal tornar oficial?
 #4.1 Suporte apenas à diálogos/arg custom, TD e Desktop são outros 500.
 # END OF TO-DO
