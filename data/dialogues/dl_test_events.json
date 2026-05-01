@@ -1,0 +1,98 @@
+{
+	"entry": "start",
+	"nodes": [
+		{
+			"id": "start",
+			"_text": "Ei novinha, tá online e metendo?",
+			"wait": 2.0,
+			"next": "response1"
+		},
+		{
+			"id": "response1",
+			"_text": "Hã? Quem é você??",
+			"wps": 11,
+			"wait": 2.0,
+			"next": "response2"
+		},
+		{
+			"id": "response2",
+			"_text": "Relaxa, sou aquele cara, tu me conhece bem.",
+			"wait": 3.0,
+			"next": "response3"
+		},
+		{
+			"id": "response3",
+			"_text": "Quem???",
+			"wps": 10,
+			"wait": 1.5,
+			"next": "response4"
+		},
+		{
+			"id": "response4",
+			"_text": "Tu sabe quem, se faz de maluca não",
+			"wait": 2.0,
+			"next": "response5"
+		},
+		{
+			"id": "response5",
+			"_text": "???\nNão faço ideia",
+			"wps": 12,
+			"wait": 1.5,
+			"pauses": [
+				{"at": 0.3, "duration": 0.5}
+			],
+			"next": "response6"
+		},
+		{
+			"id": "response6",
+			"_text": "É sério, como cê não se lembra de mim?",
+			"wait": 2.0,
+			"next": "response7"
+		},
+		{
+			"id": "response7",
+			"_text": "Vo te dar blok",
+			"wps": 15,
+			"wait": 1.0,
+			"next": "response8"
+		},
+		{
+			"id": "response8",
+			"_text": "Tá bom parei, calma aí",
+			"wait": 2.0,
+			"next": "response9"
+		},
+		{
+			"id": "response9",
+			"_text": "Então diz quem logo",
+			"wps": 15,
+			"next": "choice1"
+		},
+		{
+			"id": "choice1",
+			"type": "choice",
+			"choices": [
+				{"next":"response10"},
+				{"next":"response10-1"}
+			]
+		},
+		{
+			"id": "response10",
+			"_text": "Sou o antedeguemon, não lembra?",
+			"wait": 4.0,
+			"next": "response11"
+		},
+		{
+			"id": "response10-1",
+			"_text": "Quem logo",
+			"wait": 4.0,
+			"next": "response11"
+		},
+		{
+			"id": "response11",
+			"_text": "[color=gray]- Você foi bloqueado pelo usuário(a), não é mais possível enviar/receber mensagens.[/color]",
+			"wps": -1,
+			"next": "END"
+		}
+	]
+}

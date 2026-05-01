@@ -15,24 +15,24 @@ func _ready() -> void:
 	DialogueManager.start()
 		
 
-func _on_node_ready(node: Dictionary) -> void:
+func _on_node_ready(node: Dictionary, events: Dictionary) -> void:
 	if DialogueManager.is_choice(node):
-		_pending_node = node
+		_pending_node = events
 		_show_choices(node.get("choices", []))
 	else:
-		await _show_message(node)
-		DialogueManager.confirm_node(node)
+		await _show_message(node, events)
+		DialogueManager.confirm_node(events)
 
 func _scroll_to_bottom() -> void:
 	var scroll = $VBoxContainer/ScrollContainer
 	scroll.scroll_vertical = scroll.get_v_scroll_bar().max_value
 
-func _show_message(node: Dictionary) -> void:
+func _show_message(node: Dictionary, events: Dictionary) -> void:
 	var is_user: bool = node.get("speaker", "") == "user"
-	var read_time: float = node.get("wait", 0.0)
+	var read_time: float = events.get("wait", 0.0)
 	
 	if not is_user:
-		await _simulate_typing(node)
+		await _simulate_typing(node, events)
 	
 	var row = HBoxContainer.new()
 	row.size_flags_horizontal = Control.SIZE_FILL
@@ -81,10 +81,10 @@ func _clear_choices() -> void:
 		if child is Button:
 			child.queue_free()
 
-func _simulate_typing(node: Dictionary) ->  void:
+func _simulate_typing(node: Dictionary, events: Dictionary) ->  void:
 	var text: String = node.get("text", "")
-	var wps: float = node.get("wps", 6.0)
-	var pauses: Array = node.get("pauses", [])
+	var wps: float = events.get("wps", 6.0)
+	var pauses: Array = events.get("pauses", [])
 	
 	var word_count = text.length()
 	var total_time = max(0.0, word_count / (1.0 if wps == 0.0 else wps))
@@ -147,11 +147,6 @@ func _on_dialogue_ended() -> void:
 	_pending_node = {}
 
 # TODO:
-#1. Separar entre dois arquivos, um pra diálogos e o outro pra eventos
-#1.1 Eventos teria o nome do arquivo original _events.json
-#1.2 Modificar o arquivo original pra conter apenas o id/speaker/texto
-#1.3 Garante que eventos sejam 'secretos' mas não hardcoded
-#1.4 Se tiver um _events-language.json carregará esse ao invés do padrão, permitindo mods
 #2. Arquivo _events.json será a coletânea de eventos como wps, wait, effects e etc
 #2.1 Ele será executado assim que um diálogo com o mesmo id for carregado no jogo
 #3.1 Lista de Eventos:
