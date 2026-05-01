@@ -1,0 +1,78 @@
+{
+	"entry": "start",
+	"nodes": [
+		{
+			"id": "start",
+			"speaker": "user",
+			"text": "Ei novinha, tá online e metendo?"
+		},
+		{
+			"id": "response1",
+			"speaker": "novinha",
+			"text": "Hã? Quem é você??"
+		},
+		{
+			"id": "response2",
+			"speaker": "user",
+			"text": "Relaxa, sou aquele cara, tu me conhece bem."
+		},
+		{
+			"id": "response3",
+			"speaker": "novinha",
+			"text": "Quem???"
+		},
+		{
+			"id": "response4",
+			"speaker": "user",
+			"text": "Tu sabe quem, se faz de maluca não"
+		},
+		{
+			"id": "response5",
+			"speaker": "novinha",
+			"text": "???\nNão faço ideia"
+		},
+		{
+			"id": "response6",
+			"speaker": "user",
+			"text": "É sério, como cê não se lembra de mim?"
+		},
+		{
+			"id": "response7",
+			"speaker": "novinha",
+			"text": "Vo te dar blok"
+		},
+		{
+			"id": "response8",
+			"speaker": "user",
+			"text": "Tá bom parei, calma aí"
+		},
+		{
+			"id": "response9",
+			"speaker": "novinha",
+			"text": "Então diz quem logo"
+		},
+		{
+			"id": "choice1",
+			"type": "choice",
+			"choices": [
+				{"text": "1. Sou o antedeguemon"},
+				{"text": "2. Quem"}
+			]
+		},
+		{
+			"id": "response10",
+			"speaker": "user",
+			"text": "Sou o antedeguemon, não lembra?"
+		},
+		{
+			"id": "response10-1",
+			"speaker": "user",
+			"text": "Quem logo"
+		},
+		{
+			"id": "response11",
+			"speaker": "system",
+			"text": "[color=gray]- Você foi bloqueado pelo usuário(a), não é mais possível enviar/receber mensagens.[/color]"
+		}
+	]
+}
