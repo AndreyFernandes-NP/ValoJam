@@ -12,6 +12,7 @@ config_version=5
 
 config/name="The Game You Sent Me"
 config/version="0.1"
+run/main_scene="uid://bgy2j10tdsk6n"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -20,6 +21,7 @@ config/icon="res://icon.svg"
 GameState="*uid://bwj26n3d0mkex"
 WindowManager="*uid://lllhdsqc7ae1"
 DialogueManager="*uid://cidmfe0iamrfl"
+AnimationManager="*uid://kr82ikqg4yo3"
 
 [display]
 

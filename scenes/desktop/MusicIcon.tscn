@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dhi5a64oav3d8"]
 
-[ext_resource type="Texture2D" path="res://assets/ui/Desktop/musica.png" id="1_ivehf"]
+[ext_resource type="Texture2D" uid="uid://d3606xgw2b3r6" path="res://assets/ui/Desktop/musica.png" id="1_ivehf"]
 
 [node name="MusicIcon" type="Control" unique_id=2077177298]
 custom_minimum_size = Vector2(80, 96)
