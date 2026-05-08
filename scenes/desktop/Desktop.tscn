@@ -1,25 +1,78 @@
 [gd_scene format=3 uid="uid://bgy2j10tdsk6n"]
 
 [ext_resource type="Script" uid="uid://cse8sxme8k50b" path="res://Scripts/Desktop/Desktop.gd" id="1_ubcjj"]
-[ext_resource type="Texture2D" uid="uid://crscwatgg23h3" path="res://assets/ui/Desktop/backgroundPH.jpg" id="2_kbkx2"]
-[ext_resource type="Texture2D" uid="uid://b2sl0ug0lrjfy" path="res://assets/ui/Desktop/TDButtonPH.png" id="3_4eauc"]
-[ext_resource type="Texture2D" uid="uid://b2pwixy3tujbe" path="res://assets/ui/Desktop/TaskBarPH.jpg" id="3_ubcjj"]
-[ext_resource type="Texture2D" uid="uid://d2vt34w1dy6i2" path="res://assets/ui/Desktop/mensagePH.png" id="4_4eauc"]
-[ext_resource type="Texture2D" uid="uid://tgy3540o2hlr" path="res://assets/ui/Desktop/Folder.png" id="5_507k5"]
+[ext_resource type="Texture2D" uid="uid://b2sl0ug0lrjfy" path="res://assets/ui/Desktop/Images/TDButtonPH.png" id="3_4eauc"]
+[ext_resource type="Texture2D" uid="uid://c2hsj4cr4e4w2" path="res://assets/ui/Desktop/Images/backgroundPH.png" id="3_ubcjj"]
+[ext_resource type="Texture2D" uid="uid://d2vt34w1dy6i2" path="res://assets/ui/Desktop/Images/mensagePH.png" id="4_4eauc"]
+[ext_resource type="Texture2D" uid="uid://tgy3540o2hlr" path="res://assets/ui/Desktop/Images/Folder.png" id="5_davua"]
 [ext_resource type="Script" uid="uid://b3hrpnaycj8gr" path="res://Scripts/Desktop/MusicFolder.gd" id="6_507k5"]
-[ext_resource type="Texture2D" uid="uid://dvkhmtqbnj384" path="res://assets/ui/Desktop/OSPH.png" id="6_pyejf"]
-[ext_resource type="Texture2D" uid="uid://bp7s4qxb0mqqd" path="res://assets/ui/Desktop/STPH.png" id="7_sfvhr"]
+[ext_resource type="StyleBox" uid="uid://bcn2vh2n0ld2e" path="res://assets/themes/desktop/WindowTheme.tres" id="6_davua"]
+[ext_resource type="Texture2D" uid="uid://8tn8f3r2g0jh" path="res://assets/ui/Desktop/Images/LogoPH.png" id="6_pyejf"]
+[ext_resource type="Texture2D" uid="uid://bp7s4qxb0mqqd" path="res://assets/ui/Desktop/Images/STPH.png" id="7_sfvhr"]
 [ext_resource type="Script" uid="uid://dg35a3kdeo1es" path="res://Scripts/Desktop/Volume.gd" id="8_5bw1f"]
-[ext_resource type="Texture2D" uid="uid://6aey0m76wkwy" path="res://assets/ui/Desktop/volumePH.png" id="9_kd4lw"]
+[ext_resource type="Texture2D" uid="uid://6aey0m76wkwy" path="res://assets/ui/Desktop/Images/volumePH.png" id="9_kd4lw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_507k5"]
+bg_color = Color(0.9824968, 0.3272888, 0.5125551, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6gbcc"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aul7o"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_right = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00fq8"]
+bg_color = Color(0.92156863, 0, 0.18039216, 1)
+corner_radius_top_right = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oh4tp"]
+bg_color = Color(0.8235294, 0, 0.15686275, 1)
+corner_radius_top_right = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4e1uk"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ki61e"]
+bg_color = Color(0.7447408, 0.74474084, 0.7447407, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_443fj"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atwry"]
+bg_color = Color(0.74509805, 0.74509805, 0.74509805, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88hvp"]
+bg_color = Color(0.92036945, 0, 0.18140437, 1)
+corner_radius_top_right = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyejf"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_right = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4eauc"]
-bg_color = Color(0.7189978, 0, 0.21384004, 1)
+bg_color = Color(0.8235294, 0, 0.15686275, 1)
+corner_radius_top_right = 12
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4eauc"]
-texture = ExtResource("3_ubcjj")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cfgx8"]
+bg_color = Color(0.8039216, 0.7882353, 0.7607843, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_davua"]
+bg_color = Color(0.8039216, 0.7882353, 0.7607843, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
 [node name="Desktop" type="Control" unique_id=961746121]
 layout_mode = 3
@@ -37,7 +90,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_kbkx2")
+texture = ExtResource("3_ubcjj")
 expand_mode = 1
 stretch_mode = 6
 
@@ -153,7 +206,7 @@ offset_right = 32.0
 offset_bottom = 64.0
 grow_horizontal = 2
 mouse_filter = 2
-texture = ExtResource("5_507k5")
+texture = ExtResource("5_davua")
 expand_mode = 1
 stretch_mode = 5
 
@@ -194,37 +247,42 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.994
 anchor_bottom = 0.92200005
-offset_right = 7.6799316
-offset_bottom = 8.159973
+offset_left = 24.0
+offset_top = 32.0
+offset_right = -16.320068
+offset_bottom = -31.840027
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_507k5")
+
+[node name="Content" type="Control" parent="WindowLayer/TowerDefenseWindow" unique_id=838618364]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 32.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TitleBar" type="Panel" parent="WindowLayer/TowerDefenseWindow" unique_id=480293377]
+[node name="TitleBar" type="Panel" parent="WindowLayer/TowerDefenseWindow" unique_id=719439397]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 32.0
 grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6gbcc")
 
-[node name="colorBG" type="ColorRect" parent="WindowLayer/TowerDefenseWindow/TitleBar" unique_id=2037998310]
+[node name="titleName" type="Label" parent="WindowLayer/TowerDefenseWindow/TitleBar" unique_id=1185038531]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.84604037, 0.8889944, 0.8816252, 1)
-
-[node name="titleName" type="Label" parent="WindowLayer/TowerDefenseWindow/TitleBar" unique_id=1298292040]
-layout_mode = 0
 offset_left = 64.0
 offset_top = 8.0
 offset_right = 180.0
-offset_bottom = 31.0
-theme_override_colors/font_color = Color(0.0071415612, 0.0071415612, 0.0071415603, 1)
-text = "Tower Defense"
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0.019925633, 0.019925632, 0.019925632, 1)
+text = "Tower defense
+"
 
-[node name="closeButton" type="Button" parent="WindowLayer/TowerDefenseWindow/TitleBar" unique_id=1501235827]
+[node name="closeButton" type="Button" parent="WindowLayer/TowerDefenseWindow/TitleBar" unique_id=1786984200]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -238,37 +296,61 @@ grow_horizontal = 0
 grow_vertical = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_pyejf")
-theme_override_styles/hover = SubResource("StyleBoxFlat_4eauc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_aul7o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_00fq8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oh4tp")
 text = "X"
 
-[node name="Content" type="Control" parent="WindowLayer/TowerDefenseWindow" unique_id=838618364]
+[node name="restoreButton" type="Button" parent="WindowLayer/TowerDefenseWindow/TitleBar" unique_id=1425089201]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 32.0
-grow_horizontal = 2
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -16.0
+offset_right = -40.0
+offset_bottom = 16.0
+grow_horizontal = 0
 grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_4e1uk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ki61e")
+text = "[  ]"
 
-[node name="ColorRect" type="ColorRect" parent="WindowLayer/TowerDefenseWindow/Content" unique_id=320548850]
+[node name="minimizeButton" type="Button" parent="WindowLayer/TowerDefenseWindow/TitleBar" unique_id=56338210]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -16.0
+offset_right = -80.0
+offset_bottom = 16.0
+grow_horizontal = 0
 grow_vertical = 2
-color = Color(0.57060033, 0.31672537, 0.31814414, 1)
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_443fj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_atwry")
+text = "-"
 
 [node name="MensageWindow" type="Panel" parent="WindowLayer" unique_id=1758964204]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.994
 anchor_bottom = 0.92200005
-offset_right = 7.6799316
-offset_bottom = 8.159973
+offset_left = 24.0
+offset_top = 32.0
+offset_right = -16.320068
+offset_bottom = -31.840027
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = ExtResource("6_davua")
 
 [node name="TitleBar" type="Panel" parent="WindowLayer/MensageWindow" unique_id=8681536]
 layout_mode = 1
@@ -276,15 +358,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 32.0
 grow_horizontal = 2
-
-[node name="colorBG" type="ColorRect" parent="WindowLayer/MensageWindow/TitleBar" unique_id=1815635511]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.8809967, 0.87785375, 0.8786344, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6gbcc")
 
 [node name="titleName" type="Label" parent="WindowLayer/MensageWindow/TitleBar" unique_id=2117438013]
 layout_mode = 1
@@ -309,11 +383,51 @@ grow_horizontal = 0
 grow_vertical = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_pyejf")
-theme_override_styles/hover = SubResource("StyleBoxFlat_4eauc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_aul7o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_88hvp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oh4tp")
 text = "X"
 
+[node name="restoreButton" type="Button" parent="WindowLayer/MensageWindow/TitleBar" unique_id=1600970966]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -16.0
+offset_right = -40.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_4e1uk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ki61e")
+text = "[  ]"
+
+[node name="minimizeButton" type="Button" parent="WindowLayer/MensageWindow/TitleBar" unique_id=1482025637]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -16.0
+offset_right = -80.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_443fj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_atwry")
+text = "-"
+
 [node name="Content" type="Control" parent="WindowLayer/MensageWindow" unique_id=1429821879]
+clip_contents = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -362,6 +476,25 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_pyejf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4eauc")
 text = "X"
 
+[node name="restoreButton" type="Button" parent="WindowLayer/MusicFolderWindow/TitleBar" unique_id=1954436370]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -16.0
+offset_right = -40.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_pyejf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4eauc")
+text = "[  ]"
+
 [node name="Content" type="Control" parent="WindowLayer/MusicFolderWindow" unique_id=1714669390]
 anchors_preset = 0
 offset_top = 32.0
@@ -391,20 +524,24 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -48.0
+offset_left = 24.0
+offset_top = -56.0
+offset_right = -24.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_4eauc")
+theme_override_styles/panel = SubResource("StyleBoxFlat_cfgx8")
 
 [node name="systemButton" type="Button" parent="Taskbar" unique_id=1834157389]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
+offset_left = 8.0
 offset_top = -24.0
-offset_right = 48.0
-offset_bottom = 24.0
+offset_right = 56.0
+offset_bottom = 21.0
 grow_vertical = 2
 mouse_default_cursor_shape = 2
 icon = ExtResource("6_pyejf")
@@ -412,25 +549,19 @@ flat = true
 expand_icon = true
 
 [node name="systemMenu" type="Panel" parent="Taskbar" unique_id=228375198]
+clip_contents = true
 layout_mode = 0
-offset_top = -160.0
-offset_right = 64.0
-
-[node name="colorBG" type="ColorRect" parent="Taskbar/systemMenu" unique_id=451443527]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0.46470046, 0.6715439, 0.92641413, 0.36078432)
+offset_left = 8.0
+offset_top = -224.0
+offset_right = 48.0
+offset_bottom = -8.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_davua")
 
 [node name="shutDownIcon" type="Button" parent="Taskbar/systemMenu" unique_id=2071737628]
 layout_mode = 0
-offset_top = 88.0
-offset_right = 64.0
-offset_bottom = 152.0
+offset_top = 168.0
+offset_right = 40.0
+offset_bottom = 208.0
 mouse_default_cursor_shape = 2
 icon = ExtResource("7_sfvhr")
 flat = true
@@ -472,3 +603,9 @@ rotation = 4.712389
 max_value = 1.0
 step = 0.001
 script = ExtResource("8_5bw1f")
+
+[node name="taskIcons" type="HBoxContainer" parent="Taskbar" unique_id=1067190561]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 528.0
+offset_bottom = 48.0

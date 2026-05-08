@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2vt34w1dy6i2"
-path="res://.godot/imported/mensagePH.png-9458d185d8ddb378f86cd8d37b449f99.ctex"
+uid="uid://8tn8f3r2g0jh"
+path="res://.godot/imported/LogoPH.png-fec62aa987c67b09bc8eeb48c159947e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/Desktop/mensagePH.png"
-dest_files=["res://.godot/imported/mensagePH.png-9458d185d8ddb378f86cd8d37b449f99.ctex"]
+source_file="res://assets/ui/Desktop/Images/LogoPH.png"
+dest_files=["res://.godot/imported/LogoPH.png-fec62aa987c67b09bc8eeb48c159947e.ctex"]
 
 [params]
 

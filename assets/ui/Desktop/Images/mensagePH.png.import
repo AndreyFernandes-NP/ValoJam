@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvkhmtqbnj384"
-path="res://.godot/imported/OSPH.png-6e9df3a0c26d52589deefd4c572ed866.ctex"
+uid="uid://d2vt34w1dy6i2"
+path="res://.godot/imported/mensagePH.png-4414eb04243e04171a78a827be71c80b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/Desktop/OSPH.png"
-dest_files=["res://.godot/imported/OSPH.png-6e9df3a0c26d52589deefd4c572ed866.ctex"]
+source_file="res://assets/ui/Desktop/Images/mensagePH.png"
+dest_files=["res://.godot/imported/mensagePH.png-4414eb04243e04171a78a827be71c80b.ctex"]
 
 [params]
 

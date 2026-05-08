@@ -1,13 +1,17 @@
 extends Control
 
+@onready var messages_box = $Content/MessagePanel/ScrollContainer/MessagesBox
+@onready var scroll_container = $Content/MessagePanel/ScrollContainer
+@onready var choices_container = $Content/ChoicesPanel/ChoicesContainer
+
 var _pending_node: Dictionary = {}
 var _typing_tween: Tween = null
 var _impatience_timer: SceneTreeTimer = null
 
 func _ready() -> void:
-	$VBoxContainer/ScrollContainer/MessagesBox.add_theme_constant_override("separation", 12)
-	$VBoxContainer/ScrollContainer.get_v_scroll_bar().changed.connect(_scroll_to_bottom)
-	$VBoxContainer/ChoicesContainer.add_theme_constant_override("separation", 8)
+	messages_box.add_theme_constant_override("separation", 12)
+	scroll_container.get_v_scroll_bar().changed.connect(_scroll_to_bottom)
+	choices_container.add_theme_constant_override("separation", 8)
 	
 	DialogueManager.node_ready.connect(_on_node_ready)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
@@ -24,8 +28,7 @@ func _on_node_ready(node: Dictionary) -> void:
 		DialogueManager.confirm_node(node)
 
 func _scroll_to_bottom() -> void:
-	var scroll = $VBoxContainer/ScrollContainer
-	scroll.scroll_vertical = scroll.get_v_scroll_bar().max_value
+	scroll_container.scroll_vertical = scroll_container.get_v_scroll_bar().max_value
 
 func _show_message(node: Dictionary) -> void:
 	var is_user: bool = node.get("speaker", "") == "user"
@@ -42,11 +45,13 @@ func _show_message(node: Dictionary) -> void:
 	
 	var label = RichTextLabel.new()
 	label.bbcode_enabled = true
+	
 	label.fit_content = true
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD
 	label.text_direction = Control.TEXT_DIRECTION_LTR
 	label.custom_minimum_size.x = 100
 	label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	label.add_theme_color_override("default_color", Color("#2b2b2b"))
 	label.text = "%s" % node.get("text", "")
 	
 	if is_user:
@@ -58,7 +63,7 @@ func _show_message(node: Dictionary) -> void:
 		row.add_child(label)
 		row.add_child(spacer)
 	
-	$VBoxContainer/ScrollContainer/MessagesBox.add_child(row)
+	messages_box.add_child(row)
 	if read_time > 0:
 		await get_tree().create_timer(read_time).timeout
 
@@ -68,16 +73,22 @@ func _show_choices(choices: Array) -> void:
 		btn.text = choices[i]["text"]
 		btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		btn.flat = true
+
+		btn.add_theme_color_override("font_color", Color.BLACK)
+		btn.add_theme_color_override("font_hover_color", Color.BLACK)
+		btn.add_theme_color_override("font_pressed_color", Color.BLACK)
+		btn.add_theme_color_override("font_hover_pressed_color", Color.BLACK)
+		btn.add_theme_color_override("font_focus_color", Color.BLACK)
 		
 		var current_node = _pending_node
 		btn.pressed.connect(func():
 			_impatience_timer = null
 			_clear_choices()
 			DialogueManager.pick_choice(current_node, i))
-		$VBoxContainer/ChoicesContainer.add_child(btn)
+		choices_container.add_child(btn)
 
 func _clear_choices() -> void:
-	for child in $VBoxContainer/ChoicesContainer.get_children():
+	for child in choices_container.get_children():
 		if child is Button:
 			child.queue_free()
 
@@ -115,7 +126,7 @@ func _show_typing_indicator() -> Label:
 	var idx = [0]
 	
 	indicator.text = ". . ."
-	$VBoxContainer/ScrollContainer/MessagesBox.add_child(indicator)
+	messages_box.add_child(indicator)
 	
 	_typing_tween = get_tree().create_tween().set_loops()
 	_typing_tween.tween_callback(func():

@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dnnl6ig7xadph"]
+
+[ext_resource type="Script" uid="uid://depvu70ndw3m6" path="res://Scripts/Desktop/Shutdown2.gd" id="1_pkke3"]
+[ext_resource type="Shader" uid="uid://ccxv3evi3qvr6" path="res://Scripts/Desktop/Shutdown2.gdshader" id="2_tjrw0"]
+[ext_resource type="AudioStream" uid="uid://d32hkgjb0o6xs" path="res://assets/ui/Desktop/Sounds/shutdown2.mp3" id="3_wir84"]
+[ext_resource type="Shader" uid="uid://b7xgss1585i4j" path="res://Scripts/Desktop/Teste.gdshader" id="4_tjrw0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ob5sj"]
+shader = ExtResource("2_tjrw0")
+shader_parameter/band_size = 1.0
+shader_parameter/brightness = 1.0
+shader_parameter/glow_size = 0.25
+shader_parameter/center_glow = 0.0
+shader_parameter/noise_power = 0.12
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cyfwq"]
+shader = ExtResource("4_tjrw0")
+shader_parameter/opacity = 0.45
+shader_parameter/border_size = 0.08
+shader_parameter/roundness = 0.18
+shader_parameter/scanline_strength = 0.18
+shader_parameter/scanline_count = 420.0
+
+[node name="Shutdown" type="Control" unique_id=1633569136]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pkke3")
+
+[node name="background" type="ColorRect" parent="." unique_id=1689010808]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="lightEffect" type="ColorRect" parent="." unique_id=988464086]
+material = SubResource("ShaderMaterial_ob5sj")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="shutdownSound" type="AudioStreamPlayer2D" parent="." unique_id=1579397212]
+stream = ExtResource("3_wir84")
+
+[node name="screen" type="ColorRect" parent="." unique_id=547522930]
+material = SubResource("ShaderMaterial_cyfwq")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

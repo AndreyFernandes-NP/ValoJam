@@ -1,19 +1,33 @@
 [gd_scene format=3 uid="uid://ijjieqmpshjv"]
 
-[ext_resource type="Script" uid="uid://cwe4rsv4t6q5i" path="res://scenes/chat/ChatWindow.gd" id="1_wxl6r"]
+[ext_resource type="Script" uid="uid://cwe4rsv4t6q5i" path="res://Scenes/chat/ChatWindow.gd" id="1_wxl6r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7dhx2"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 18
+border_width_top = 18
+border_color = Color(0.6666667, 0.654902, 0.63529414, 1)
+corner_detail = 1
 
 [node name="ChatWindow" type="Control" unique_id=75402779]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -560.0
-offset_bottom = -240.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wxl6r")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=691913424]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=548014907]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9254902, 0.9137255, 0.84313726, 1)
+
+[node name="Content" type="Control" parent="." unique_id=239224621]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,26 +35,71 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=963154790]
-layout_mode = 2
+[node name="MessagePanel" type="Panel" parent="Content" unique_id=2003279462]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.325
+anchor_top = 0.08
+anchor_right = 0.9125
+anchor_bottom = 0.64444447
+theme_override_styles/panel = SubResource("StyleBoxFlat_7dhx2")
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Content/MessagePanel" unique_id=963154790]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_vertical = 3
 
-[node name="MessagesBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=970938283]
+[node name="MessagesBox" type="VBoxContainer" parent="Content/MessagePanel/ScrollContainer" unique_id=970938283]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1503410344]
-layout_mode = 2
+[node name="MarginContainer" type="MarginContainer" parent="Content" unique_id=1503410344]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 405.0
+offset_right = 1112.0
+offset_bottom = 420.0
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_bottom = 15
 
-[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer" unique_id=1355614869]
+[node name="HSeparator" type="HSeparator" parent="Content/MarginContainer" unique_id=1355614869]
 visible = false
 layout_mode = 2
 
-[node name="ChoicesContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=1618497212]
+[node name="ChoicesPanel" type="Panel" parent="Content" unique_id=1588328981]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.32749996
+anchor_top = 0.725
+anchor_right = 0.9125
+anchor_bottom = 0.95555556
+theme_override_styles/panel = SubResource("StyleBoxFlat_7dhx2")
+metadata/_edit_use_anchors_ = true
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="Content/ChoicesPanel" unique_id=1618497212]
 custom_minimum_size = Vector2(0, 60)
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.800049
+offset_top = 32.0
+offset_right = -12.800049
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_vertical = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="Content/ChoicesPanel/ChoicesContainer" unique_id=174132632]
+layout_mode = 2

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2pwixy3tujbe"
-path="res://.godot/imported/TaskBarPH.jpg-3278ae76d03ec192ce99f8b8e4a39855.ctex"
+uid="uid://cpg83mk68mfea"
+path="res://.godot/imported/taskBarPH.PNG-67b8749535e679091e2f189c2d6ab81c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/Desktop/TaskBarPH.jpg"
-dest_files=["res://.godot/imported/TaskBarPH.jpg-3278ae76d03ec192ce99f8b8e4a39855.ctex"]
+source_file="res://assets/ui/Desktop/Images/taskBarPH.PNG"
+dest_files=["res://.godot/imported/taskBarPH.PNG-67b8749535e679091e2f189c2d6ab81c.ctex"]
 
 [params]
 
